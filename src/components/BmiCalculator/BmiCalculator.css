@@ -1,0 +1,94 @@
+.bmi-section {
+  background-color: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bmi-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.bmi-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.bmi-form {
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.bmi-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-left: 4px solid var(--accent-red);
+  border-radius: 4px;
+}
+
+.bmi-result h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.bmi-result span {
+  color: var(--accent-red);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.bmi-result p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.bmi-result strong {
+  text-transform: uppercase;
+}
+
+.bmi-result strong.underweight { color: #f39c12; }
+.bmi-result strong.normal-weight { color: #2ecc71; }
+.bmi-result strong.overweight { color: #e67e22; }
+.bmi-result strong.obese { color: #e74c3c; }
+
+.bmi-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  min-height: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+  .bmi-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
